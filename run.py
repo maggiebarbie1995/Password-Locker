@@ -23,6 +23,21 @@ def save_user(user):
 
     user.save_user_details()
 
+    # Delete user
+    
+def del_user(user):
+
+    """
+    Fuction to delete a contact
+    """
+
+    user.delete_user()
+
+
+    
+
+
+
 
 
 
