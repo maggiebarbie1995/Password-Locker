@@ -35,16 +35,35 @@ def del_user(user):
 
     # Finding user
 
-def find_user(number):
+def find_user():
 
     """
-    Function that finds a contact by number and returns the contact
+    Function that finds and returns saved users
     """
-    
-    return User.find_by_number(number)
+
+    return User.find_users()
+
+    # Display credentials
+
+def display_cred():
+
+    """
+    Function that returns saved user credentials
+    """
+
+    return Credential.display_credential()
+
+def create_credential(fname,mname,password):
+
+    """
+    Function to create new user credentials
+    """
+
+    new_credential = Credential(fname,mname,password)
+
+    return new_credential
 
 
-    
 
 
 
