@@ -63,7 +63,11 @@ def create_credential(fname,mname,password):
 
     return new_credential
 
+def verify_user(fname,mname,password):
 
+    checking_user = Credential.check_user(fname,mname,password)
+
+    return checking_user
 
 
 
