@@ -69,6 +69,15 @@ def verify_user(fname,mname,password):
 
     return checking_user
 
+def save_cred(credential):
+
+    """
+    Function to save user credentials
+    """
+    
+    credential.save_credential()
+
+
 
 
 
