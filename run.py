@@ -24,7 +24,7 @@ def save_user(user):
     user.save_user_details()
 
     # Delete user
-    
+
 def del_user(user):
 
     """
@@ -32,6 +32,16 @@ def del_user(user):
     """
 
     user.delete_user()
+
+    # Finding user
+
+def find_user(number):
+
+    """
+    Function that finds a contact by number and returns the contact
+    """
+    
+    return User.find_by_number(number)
 
 
     
