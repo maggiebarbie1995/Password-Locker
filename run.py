@@ -35,13 +35,13 @@ def del_user(user):
 
     # Finding user
 
-def find_user():
+def display_user():
 
     """
     Function that finds and returns saved users
     """
 
-    return User.find_users()
+    return User.display_users()
 
     # Display credentials
 
@@ -74,8 +74,17 @@ def save_cred(credential):
     """
     Function to save user credentials
     """
-    
+
     credential.save_credential()
+
+def del_cred(credential):
+
+    """
+    Function to delete all users credentials
+    """
+    
+    credential.delete_credential()
+
 
 
 
