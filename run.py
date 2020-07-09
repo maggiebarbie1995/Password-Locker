@@ -12,8 +12,22 @@ def create_user(fname, mname,password):
 
     new_user = User(fname, mname,password)
     return new_user
-    
 
+    # Save user
+
+def save_user(user):
+
+    """
+    Function to save contact
+    """
+
+    user.save_user_details()
+
+
+
+
+
+    
 
 
 
