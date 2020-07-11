@@ -28,7 +28,7 @@ def save_user(user):
 def del_user(user):
 
     """
-    Fuction to delete a contact
+    Function to delete a contact
     """
 
     user.delete_user()
@@ -89,7 +89,7 @@ def main():
     print("Hello! Welcome to your Password Locker.Choose the right way from the above methods")  
 
      while True:
-         print("Allowed Actions: \n a - create a new user account with a Personal password\n b - create a new user account with an auto-generated password\n c - Display all user accounts \n d - Login  to an existing Account\n ex -exit the contact list \n")    
+         print("\n a - create a new user account with a Personal password\n b - create a new user account with an auto-generated password\n c - Display all user accounts \n d - Login  to an existing Account\n ex -exit the contact list \n")    
      
                     short_code = input().lower()
 
