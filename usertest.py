@@ -29,7 +29,13 @@ def test_init(self):
         self.assertEqual(self.new_user.first_name,"Leroy")
         self.assertEqual(self.new_user.middle_name,"Smith")
         
+ def tearDown(self):
 
+        """
+        tearDown method that does clean up after each test case has run.
+        """
+
+        User.users_list = []
 
 
 
