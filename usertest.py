@@ -29,13 +29,23 @@ def test_init(self):
         self.assertEqual(self.new_user.first_name,"Leroy")
         self.assertEqual(self.new_user.middle_name,"Smith")
         
- def tearDown(self):
+def tearDown(self):
 
         """
         tearDown method that does clean up after each test case has run.
         """
 
         User.users_list = []
+
+def test_save_user(self):
+
+        """
+        test_save_user test case to test if the user object is saved into
+         the users list
+        """
+        
+        self.new_user.save_user_details()  # saving the new user
+        self.assertEqual(len(User.users_array), 1) 
 
 
 
