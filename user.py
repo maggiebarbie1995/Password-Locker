@@ -11,8 +11,17 @@ class User:
         self.password = password
 
     def save_user(self):
+
         """
         save_user method saves a new user objects to the user_list
         """
 
         User.user_list.append(self)
+
+    @classmethod
+    def display_user(cls):
+
+        """
+        Method that takes in a number and returns a contact that matches that number.
+        """
+        return cls.user_list
