@@ -59,6 +59,15 @@ def test_save_user(self):
         test_user.save_user_details()
         self.assertEqual(len(User.users_list), 2)
 
+ def test_display_user(self):
+     
+        '''
+        Test case to test if a user can see a list of all the users saved
+        '''
+        
+        self.assertEqual( User.display_user() , User.user_list )
+
+
 
 
 
