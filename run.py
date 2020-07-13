@@ -88,12 +88,12 @@ def del_cred(credential):
 def main():
     print("Hello! Welcome to your Password Locker.Choose the right way from the above methods")  
 
-     while True:
-         print("\n a - create a new user account with a Personal password\n b - create a new user account with an auto-generated password\n c - Display all user accounts \n d - Login  to an existing Account\n ex -exit the contact list \n")    
+while True:
+        print("\n a - create a new user account with a Personal password\n b - create a new user account with an auto-generated password\n c - Display all user accounts \n d - Login  to an existing Account\n ex -exit the contact list \n")    
      
-                    short_code = input().lower()
+        short_code = input().lower()
 
-                    if short_code == 'a':
+        if short_code == 'a':
                             print("New User")
                             print("-"*10)
                             print("Hi! Which site do you wish to create an account?")
@@ -115,46 +115,46 @@ def main():
                             print(f" username is {user_name} and the password is {password}") 
                             print ('\n')
 
-                    elif short_code == 'b':
+        elif short_code == 'b':
                         print("New User")
-                            print("-"*10)
-                            print("Hi! Which site do you wish to create an account?")
-                            site = input()
-                            print(f"Welcome {site}?")
+                        print("-"*10)
+                        print("Hi! Which site do you wish to create an account?")
+                        site = input()
+                        print(f"Welcome {site}?")
 
-                            print ("First name ....")
-                            f_name = input()
+                        print ("First name ....")
+                        f_name = input()
 
-                            print("Middle name ...")
-                            m_name = input()
+                        print("Middle name ...")
+                        m_name = input()
 
-                            print("Enter Password ...")
-                            password = input()
+                        print("Enter Password ...")
+                        password = input()
 
 
-                            save_user(create_user(f_name,m_name)) # create and save new contact.
-                            save_cred(create_credential(user_name, pword, e_address))  # create and save a credential listing for the above user                            
-                            print ('\n')
-                            print(f"New {site} account by {f_name} {m_name} successfully created")
-                            print(f" username is {user_name} and the password is {password}") 
-                            print ('\n')
+                        save_user(create_user(f_name,m_name)) # create and save new contact.
+                        save_cred(create_credential(user_name, pword, e_address))  # create and save a credential listing for the above user                            
+                        print ('\n')
+                        print(f"New {site} account by {f_name} {m_name} successfully created")
+                        print(f" username is {user_name} and the password is {password}") 
+                        print ('\n')
 
-                    elif short_code == 'c':
+        elif short_code == 'c':
 
-                            if display_user():
+            if display_user():
                                 print("")
                                 print('\n')
 
-                                for user in display user():
+            for user in display_user():
                                     print(f"{user.first_name}) {user.middle_name} has an account{site}")
                                     print('\n')
 
-                                else:
+            else:
                                     print('\n')
                                     print("you don't have any existing account")
                                     print('\n')
 
-                                elif short_code == "d":
+        elif short_code == "d":
                                    print("-"*60) 
                                    print(' ')
                                    print('To login, enter your account details:')
@@ -162,24 +162,24 @@ def main():
                                    pword = str(input('Enter your password - '))
                                    user_exists = verify_user(user_name,password)
 
-                                if user_exists == user_name:
+        if user_exists == user_name:
                                    print("")
                                    print(f'Welcome {user_name}.Choose an option to continue.')                
                                    print(' ')
-     while True:
+while True:
                                    print("-"*60)
 
-                                for user in display_user():
+            for user in display_user():             
                                    print(f"{user.first_name} {user.middle_name} has an account for {site}")
                     
-                                else: 
+            else: 
                                    print('Wrong details entered please try again or create a new account.') 
 
-                    elif short_code == "ex":
+        elif short_code == "ex":
                                    print("Bye .......")
                                    break
 
-                                else:
+            else:
                                   print(" Please use the short codes")
 
         if __name__ == '__main__':
